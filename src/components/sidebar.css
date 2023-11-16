@@ -1,0 +1,51 @@
+.sidebar {
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  height: 100%;
+  display: none;
+}
+
+.side-block {
+  width: 280px;
+  background: #000;
+  height: 100%;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  transition: all 0.3s cubic-bezier(0.9, 0.32, 0.46, 1.18) 0s;
+}
+
+.side-block::-webkit-scrollbar {
+  width: 5px;
+}
+
+.side-block.show {
+  right: 0;
+}
+
+.side-block.show .body {
+  overflow-y: hidden;
+}
+
+.side-block.hide {
+  right: -450px;
+}
+
+.hdr {
+  padding: 14px;
+  width: 100%;
+  justify-content: flex-end;
+  background-color: #000;
+}
+.icon-close {
+  height: 20px;
+  cursor: pointer;
+}
+
+.items {
+}
+.items .li {
+  color: #fff;
+  cursor: pointer;
+}

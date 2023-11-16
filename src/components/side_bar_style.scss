@@ -1,0 +1,84 @@
+// Sider Bar
+.sidebar {
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 99999;
+  height: 100%;
+  inset: 0;
+  overflow: hidden;
+  .side-block {
+    width: 280px;
+    background: #000000;
+    height: 100%;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    transition: all 0.3s cubic-bezier(0.9, 0.32, 0.46, 1.18) 0s;
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    // @include media(">=phone", "<=480px") {
+    //   width: 50%;
+    // }
+    &.show {
+      right: 0;
+      .body {
+        overflow-y: hidden;
+      }
+    }
+    &.hide {
+      right: -450px;
+    }
+    .hdr {
+      // flex: 0.2;
+      padding: 14px;
+      width: 100%;
+      justify-content: flex-end;
+
+      //   background-color: $themeColor;
+      .icon-close {
+        height: 20px;
+        cursor: pointer;
+      }
+    }
+    .items {
+      // justify-content: flex-end;
+
+      .li {
+        width: 70%;
+        // padding: 12px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        margin-right: 30px;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+        border-bottom: 2px solid transparent;
+        // @include anim;
+        &:hover {
+          // border-bottom: 2px solid #fb5f38;
+          color: #fb5f38 !important;
+        }
+        &:nth-child(6) {
+          color: #9b9b9b;
+        }
+        // @include media("<=desktop") {
+        //   font-size: 15px;
+        //   margin-right: 28px;
+        //   text-align: center;
+        // }
+        // @include media("<=tablet") {
+        //   display: flex;
+        //   padding-bottom: 10px;
+        //   margin-bottom: 10px;
+        // }
+      }
+    }
+  }
+}
+
+@mixin dropDownAnim($duration: 0.3s) {
+  animation-name: drop;
+  animation-duration: 0.3s;
+  transform-origin: top;
+}

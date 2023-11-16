@@ -1,0 +1,66 @@
+.header {
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: var(--header-width);
+  padding: 15px 15px 15px 15px;
+  /* padding: 15px 0px; */
+  border-bottom: 1px solid #454258;
+  position: absolute;
+}
+.header .h-wrap {
+}
+.header .h-wrap .h-left {
+  flex: 1;
+}
+.h-left .logo {
+  background-color: #fff;
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+}
+.h-left .logo-img {
+  height: 20px;
+}
+.header .h-wrap .h-center {
+  flex: 1;
+}
+.h-center .c-item {
+  color: #fff;
+  /* font-family: "Rubik" !important; */
+  margin-right: 45px;
+  cursor: pointer;
+  font-family: "Inter", Sans-serif;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+}
+.header .h-wrap .h-right {
+  flex: 1;
+  justify-content: flex-end;
+}
+.h-right .btn-connect {
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 145.02%;
+  padding: 8px 10px;
+  border-radius: 5px;
+  background: transparent;
+  /* width: 157px; */
+  /* height: 40px; */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  border: 1.2px solid #fff;
+}
+
+.h-right .menu-icon {
+  display: none;
+}
+.h-right .menu-icon .ico {
+  height: 40px;
+  cursor: pointer;
+}

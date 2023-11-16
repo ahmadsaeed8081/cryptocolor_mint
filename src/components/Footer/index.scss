@@ -1,0 +1,27 @@
+.footer {
+  z-index: 999;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: var(--header-width);
+  padding: 15px 0px;
+  border-top: 1px solid #454258;
+  position: absolute;
+  background: #000;
+  .wrapWidth {
+    .tag {
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      font-family: "Inter";
+      margin-bottom: 10px;
+    }
+    .desc {
+      font-size: 14px;
+      color: #fff;
+      font-weight: 500;
+      font-family: "Inter";
+    }
+  }
+}

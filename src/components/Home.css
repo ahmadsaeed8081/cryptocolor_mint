@@ -1,0 +1,222 @@
+.leftbox {
+  /* position: absolute;
+  width: 223px;
+  height: 365px;
+  left: 282px;
+  top: 348px; */
+  /* background: #0e0e0e; */
+  /* border: 1px solid rgba(0, 0, 0, 0.5); */
+  box-sizing: border-box;
+  /* box-shadow: 0px 3.72487px 3.72487px #000000; */
+  border-radius: 3.72487px;
+  position: relative;
+}
+.add-lbl {
+  position: absolute;
+  bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.add-lbl .lbl {
+  color: #d8ffd1;
+  padding: 10px 8px;
+  border-radius: 8px;
+  border: 1px solid #1e1e1e;
+  width: 175px;
+  font-size: 13px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e1e1e;
+}
+.label {
+  margin-bottom: 10px;
+  color: white;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: #c4c4c436; */
+}
+.middlebox {
+  width: 355px;
+  height: 448.43px;
+  left: 564px;
+  top: 290px;
+  background: white;
+  border-radius: 4px;
+}
+.rightbox {
+  color: #c4c4c4;
+  border: 1px solid #454258;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+}
+.my-btn {
+  cursor: pointer;
+  font-family: "Inter";
+  background: linear-gradient(266.6deg, #ff00f5 0%, #2400ff 100%);
+  margin-bottom: 42px;
+  margin-top: 10px;
+  width: 85%;
+  padding: 12px;
+  height: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff !important;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.button {
+  width: 164.08px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  /* left: 1001px;
+  top: 460px; */
+  background-image: linear-gradient(266.6deg, #ff00f5 0%, #2400ff 100%);
+
+  /* background: linear-gradient(266.6deg, #ff00f5 0%, #2400ff 100%); */
+  border-radius: 4.97217px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11.4286px;
+  /* line-height: 14px; */
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+.input {
+  width: 225px;
+  height: 0px;
+  left: 1001px;
+  top: 375px;
+}
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  background: transparent;
+  transition: border-color 0.2s;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+}
+.form__field1 {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border: 1.5px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  background: transparent;
+  transition: border-color 0.2s;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 13px;
+  display: flex;
+  padding: 15px;
+  align-items: center;
+}
+.inputabel {
+  width: 225px;
+  height: 0px;
+  left: 10px;
+  top: -40px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 21px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.mint {
+  /* position: absolute; */
+  width: 38px;
+  height: 21px;
+  left: 1001px;
+  top: 416px;
+  color: white;
+  font-family: "Inter";
+  /* font-style: normal; */
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+}
+.boxinbox {
+  /* position: absolute; */
+  width: 310.61px;
+  height: 310.61px;
+  left: 32px;
+  top: 32px;
+  background: #ff6b00;
+  border-radius: 4px;
+  border: 4px solid black;
+}
+.boxtext {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-right: 52px !important;
+  /* position: absolute; */
+  height: 20.61px;
+  left: 292px;
+  top: 352px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  margin: 10px 0;
+}
+
+.boxmaintext {
+  /* position: absolute; */
+  width: 290px;
+  height: 20.61px;
+  left: 42px;
+  font-weight: 300;
+  top: 390px;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 17px;
+  text-align: center;
+  text-transform: uppercase;
+}
