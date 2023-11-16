@@ -172,6 +172,16 @@ function App() {
       let name=colorName;
       if(userName!=="")
       {
+        alert("Kindly Give a name To your NFT")
+        return
+      }      
+      if(Description!=="")
+      {
+        alert("Kindly Describe about the NFT")
+        return
+      }
+      if(userName!=="")
+      {
         name=colorName+"-"+userName;
       }
 
