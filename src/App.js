@@ -132,6 +132,7 @@ function App() {
           method: "wallet_switchEthereumChain",
           params: [{ chainId: CHAIN_ID1 }],
         });
+        connectWallet()
       }
     } catch (err) {
       alert("Something went wrong.");
@@ -150,32 +151,53 @@ function App() {
     alert("kindly connect your Wallet");
     return;
   }
-  console.log(userName);
+
+  // alert("userName CONVERT");
+
   console.log(colorName);
 
-    html2canvas(elements).then(async function(canvas) {
+    html2canvas(elements,{
+      height:500,
+      width:400,
+    scale:3
+    }).then(async function(canvas) {
       // document.body.appendChild(canvas);
-      const data1=canvas.toDataURL();
-      
+      // canvas.Image.width
+      // canvas.width = 550;
+      // canvas.height = 650;
+      // console.log(canvas)
+     let context = canvas.getContext('2d');
+     const data1=canvas.toDataURL();
+
       var img = new Image();
       img.src = data1;
-      img.width=450;
-      img.height=450;
+      // img.width = 850;
+      // img.height = 1150;
+      // context.drawImage(img,img.width*2, img.height * 2);
+      // const data2=canvas.toDataURL();
 
-      console.log("hello janu"+ img.src);
+      alert(data1)
+
+//       // alert(img.width)
+
+      const hello=
+// alert(hello)
+//       const data2=canvas.toDataURL();
+//       var img1 = new Image();
+//       img1.src = data2;
+//       alert(img.width)
+//       // alert("its data2 "+data2);
       setImageSrc(img.src)
-      console.log("helo zindagi"+img.src);
 
-      // document.body.appendChild(img);
       const description=Description.toString();
 
       let name=colorName;
-      if(userName!=="")
+      if(userName=="")
       {
         alert("Kindly Give a name To your NFT")
         return
       }      
-      if(Description!=="")
+      if(Description=="")
       {
         alert("Kindly Describe about the NFT")
         return
@@ -193,7 +215,6 @@ function App() {
     const data = JSON.stringify({
         name, description, image: data1
     });
-// alert("Description "+Description)
     try{
         // const added = await client.add(fileUrl);
         const added = await client.add(data);
@@ -210,34 +231,6 @@ function App() {
 
   });
 
-    // const description="this is description";
-    // const name="AHMIColor";
-
-    //form validation
-    // if(!name || !fileUrl) {
-    //     return
-    // }
-// console.log("helo zindagi"+imgSrc);
-//     const added = await client.add(imgSrc);
-//     const url = `https://ipfs.infura.io/ipfs/${added.path}`
-//     // setFileUrl(url);
-//     console.log("its a url "+url);
-
-//     const data = JSON.stringify({
-//         name, description, image: imgSrc
-//     });
-// console.log("its secret data"+data)
-//     try{
-//         // const added = await client.add(fileUrl);
-//         const added = await client.add(data);
-//         const url = `https://ipfs.infura.io/ipfs/${added.path}`
-//         //pass the url to sav eit on Polygon adter it has been uploaded to IPFS
-//         console.log("its a url 2 "+url);
-//         createNFT(url);
-//         console.log("hello1");
-//     }catch(error){
-//         console.log(`Error uploading file: `, error);
-//     }
 
 }
 

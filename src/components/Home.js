@@ -8,9 +8,13 @@ function Home(props) {
   const [color, setColor] = useColor("hex", "#11212");
   const [myColor, setMyColor] = useState("");
   const [openSidebar, setOpenSidebar] = useState(false);
+  const [description, set_Description] = useState("");
+  const [Name1, set_Name] = useState("");
+
+
   const divRef = useRef(null);
-  const nameRef = useRef(null);
-  const desc_Ref = useRef(null);
+  // const nameRef = useRef(null);
+  // const desc_Ref = useRef(null);
 
   return (
     <>
@@ -58,7 +62,9 @@ function Home(props) {
                   className="form__field txt"
                   placeholder="Type a name for your color"
                   name="colorName"
-                  ref={nameRef}
+                  value={Name1}
+                  onChange= {(e)=>set_Name(e.target.value)}
+                  // ref={nameRef}
                 />
               </div>
               <div className="input-r flex flex-col" style={{ border:"1 solid white"}}>
@@ -72,11 +78,13 @@ function Home(props) {
                   placeholder="Write Description"
                   name="colorName"
                   height="30"
-                  ref={desc_Ref}
+                  value={description}
+                  onChange= {(e)=>set_Description(e.target.value)}
+                  // ref={desc_Ref}
                 />
               </div>
               {/* <div className="mint flex ">Mint</div> */}
-              <div className="my-btn flex aic jc"  onClick={()=>{props.convert(divRef.current,nameRef.current.value,color.hex,desc_Ref.current.value)}}>Mint your color now</div>
+              <div className="my-btn flex aic jc"  onClick={()=>{props.convert(divRef.current,Name1,color.hex,description)}}>Mint your color now</div>
               {/* <div className="button btn flex aic jc">Mint your color now</div> */}
               <div className="rightbox">
                 Note: If the Mint button is not responding, open and unlock
@@ -85,6 +93,7 @@ function Home(props) {
             </div>
           </div>
         </div>
+        
       </div>
       {/* <Footer /> */}
     </>
