@@ -28,8 +28,6 @@
     margin: 30px 0;
   }
   .home-wrap {
-    margin-top:100;
-
     height: 90%;
     flex-direction: column;
   }
@@ -93,7 +91,7 @@
   }
 
   .home {
-    margin: 10px 0;
+    margin: 30px 0;
     padding-top: 310px;
   }
   .home.show {
@@ -102,7 +100,7 @@
   .show-color {
     display: flex;
     margin-bottom: 20px;
-    margin-top: 200px;
+    margin-top: 20px;
   }
   .show-color .btn {
     color: #fff !important;
@@ -160,16 +158,16 @@
     /* height: 125px !important; */
   }
   .middlebox {
-    width: 400px !important;
-    height: 500px !important;
+    width: 310px !important;
+    height: 370px !important;
 padding-bottom:30px;
 padding-top:5px;
 
   }
   .boxinbox {
     margin-top: 20px !important;
-    width: 350px !important;
-    height: 3505px !important;
+    width: 270px !important;
+    height: 235px !important;
   }
   .boxmaintext {
     margin-bottom: 10px !important;

@@ -159,13 +159,16 @@ function App() {
     html2canvas(elements,{
       height:500,
       width:400,
+      innerWidth:400,
+      innerheight:500,
+
     scale:3
     }).then(async function(canvas) {
       // document.body.appendChild(canvas);
       // canvas.Image.width
       // canvas.width = 550;
       // canvas.height = 650;
-      // console.log(canvas)
+      console.log(canvas)
      let context = canvas.getContext('2d');
      const data1=canvas.toDataURL();
 
