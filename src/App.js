@@ -10,6 +10,8 @@ import Web3Modal from 'web3modal'
 import html2canvas from 'html2canvas';
 import { create as ipfsHttpClient } from 'ipfs-http-client'
 import { ContractAddress,abi } from "./config";
+import { minted_colors_v1 } from "./minted_color";
+
 import {ethers } from 'ethers'
 import {Buffer} from 'buffer';
 const projectId="24THgNQOzFCOa5IPMccdboQJybN";
@@ -139,6 +141,24 @@ function App() {
     }
   }
 
+  function check_color(_col){
+    // console.log("kjhkhb");
+    // alert(minted_colors_v1[0]);
+
+    let val=false;
+    for(let i=0;i<2811;i++)
+    {
+
+      if(minted_colors_v1[i]==_col)
+      {
+        console.log(minted_colors_v1[i]);
+        val=true;
+        break;
+      }
+    }
+    return val;
+
+  }
 
 
 
@@ -170,22 +190,18 @@ function App() {
       img.src = data1;
 
 
-      alert(data1)
 
 //       // alert(img.width)
 
       const hello=
-// alert(hello)
-//       const data2=canvas.toDataURL();
-//       var img1 = new Image();
-//       img1.src = data2;
-//       alert(img.width)
-//       // alert("its data2 "+data2);
+
       setImageSrc(img.src)
 
       const description=Description.toString();
 
       let name=colorName;
+
+      
       if(userName=="")
       {
         alert("Kindly Give a name To your NFT")
@@ -216,12 +232,12 @@ function App() {
         //pass the url to sav eit on Polygon adter it has been uploaded to IPFS
         console.log("its a url 2 "+url2);     
         createNFT(url2,colorName);
-        console.log("hello1");
+        console.log("hello1 dsvsd sdvsdzxc qfwqewqqwd");
     }catch(error){
         console.log(`Error uploading file: `, error);
     }
 
-      console.log("hello1");
+      console.log("hello1f evaeds");
 
   });
 
@@ -230,16 +246,25 @@ function App() {
 
 
 async function createNFT(url,colorName){
+
   const web3Modal = new Web3Modal();
+
   const connection = await web3Modal.connect();
+
   const provider = new ethers.providers.Web3Provider(connection);
- 
 
   //sign the transaction
   const signer = provider.getSigner();
   let contract = new ethers.Contract(ContractAddress,abi, signer);
   let ret = await contract.colors(colorName);
   let owner = await contract.owner();
+
+  // check_color(colorName)
+  if(check_color(colorName)==true)
+  {
+    alert("this color is minted in previous collection");
+    return;
+  }
   if(ret!=true)
   {
     let transaction;
